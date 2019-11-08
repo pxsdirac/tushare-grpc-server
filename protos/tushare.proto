@@ -12,7 +12,12 @@ service TushareService {
     rpc MoneySupply(EmptyParam) returns (Dataframe) {}
     rpc HistData(HistDataRequest) returns (Dataframe) {}
     rpc TickData(TickDataRequest) returns (Dataframe) {}
+    rpc TodayTicks(TodayTicksRequest) returns (Dataframe) {}
 
+}
+
+message TodayTicksRequest{
+    string code = 1;
 }
 
 message EmptyParam{

@@ -29,24 +29,9 @@ class TushareServiceStub(object):
         request_serializer=tushare__pb2.TickDataRequest.SerializeToString,
         response_deserializer=tushare__pb2.Dataframe.FromString,
         )
-    self.StockBasics = channel.unary_unary(
-        '/routeguide.TushareService/StockBasics',
-        request_serializer=tushare__pb2.EmptyParam.SerializeToString,
-        response_deserializer=tushare__pb2.Dataframe.FromString,
-        )
-    self.TodayAll = channel.unary_unary(
-        '/routeguide.TushareService/TodayAll',
-        request_serializer=tushare__pb2.EmptyParam.SerializeToString,
-        response_deserializer=tushare__pb2.Dataframe.FromString,
-        )
     self.TodayTicks = channel.unary_unary(
         '/routeguide.TushareService/TodayTicks',
         request_serializer=tushare__pb2.TodayTicksRequest.SerializeToString,
-        response_deserializer=tushare__pb2.Dataframe.FromString,
-        )
-    self.Index = channel.unary_unary(
-        '/routeguide.TushareService/Index',
-        request_serializer=tushare__pb2.EmptyParam.SerializeToString,
         response_deserializer=tushare__pb2.Dataframe.FromString,
         )
 
@@ -76,28 +61,7 @@ class TushareServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def StockBasics(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def TodayAll(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
   def TodayTicks(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def Index(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -122,24 +86,9 @@ def add_TushareServiceServicer_to_server(servicer, server):
           request_deserializer=tushare__pb2.TickDataRequest.FromString,
           response_serializer=tushare__pb2.Dataframe.SerializeToString,
       ),
-      'StockBasics': grpc.unary_unary_rpc_method_handler(
-          servicer.StockBasics,
-          request_deserializer=tushare__pb2.EmptyParam.FromString,
-          response_serializer=tushare__pb2.Dataframe.SerializeToString,
-      ),
-      'TodayAll': grpc.unary_unary_rpc_method_handler(
-          servicer.TodayAll,
-          request_deserializer=tushare__pb2.EmptyParam.FromString,
-          response_serializer=tushare__pb2.Dataframe.SerializeToString,
-      ),
       'TodayTicks': grpc.unary_unary_rpc_method_handler(
           servicer.TodayTicks,
           request_deserializer=tushare__pb2.TodayTicksRequest.FromString,
-          response_serializer=tushare__pb2.Dataframe.SerializeToString,
-      ),
-      'Index': grpc.unary_unary_rpc_method_handler(
-          servicer.Index,
-          request_deserializer=tushare__pb2.EmptyParam.FromString,
           response_serializer=tushare__pb2.Dataframe.SerializeToString,
       ),
   }
