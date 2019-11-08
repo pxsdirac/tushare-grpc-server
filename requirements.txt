@@ -1,0 +1,6 @@
+tushare==1.2.48
+lxml==4.4.1
+pandas==0.25.3
+requests==2.22.0
+bs4==0.0.1
+grpcio-tools==1.25.0
