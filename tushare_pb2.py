@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='routeguide',
   syntax='proto3',
   serialized_options=_b('\n\027c.pxsdirac.grpc.tushareB\016TushareServiceP\001\242\002\003RTG'),
-  serialized_pb=_b('\n\rtushare.proto\x12\nrouteguide\"!\n\x11TodayTicksRequest\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\"\x0c\n\nEmptyParam\"\x1c\n\x0bStringValue\x12\r\n\x05value\x18\x01 \x01(\t\"\x81\x01\n\x0fHistDataRequest\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\x12\x1f\n\x05start\x18\x02 \x01(\x0b\x32\x10.routeguide.Date\x12\x1d\n\x03\x65nd\x18\x03 \x01(\x0b\x32\x10.routeguide.Date\x12 \n\x05kType\x18\x04 \x01(\x0e\x32\x11.routeguide.KType\"?\n\x0fTickDataRequest\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\x12\x1e\n\x04\x64\x61te\x18\x02 \x01(\x0b\x32\x10.routeguide.Date\"\x19\n\tDataframe\x12\x0c\n\x04json\x18\x01 \x01(\t\"0\n\x04\x44\x61te\x12\x0c\n\x04year\x18\x01 \x01(\x05\x12\r\n\x05month\x18\x02 \x01(\x05\x12\x0b\n\x03\x64\x61y\x18\x03 \x01(\x05*?\n\x05KType\x12\x05\n\x01\x44\x10\x00\x12\x05\n\x01W\x10\x01\x12\x05\n\x01M\x10\x02\x12\x06\n\x02m5\x10\x03\x12\x07\n\x03m15\x10\x04\x12\x07\n\x03m30\x10\x05\x12\x07\n\x03m60\x10\x06\x32\x9a\x02\n\x0eTushareService\x12>\n\x0bMoneySupply\x12\x16.routeguide.EmptyParam\x1a\x15.routeguide.Dataframe\"\x00\x12@\n\x08HistData\x12\x1b.routeguide.HistDataRequest\x1a\x15.routeguide.Dataframe\"\x00\x12@\n\x08TickData\x12\x1b.routeguide.TickDataRequest\x1a\x15.routeguide.Dataframe\"\x00\x12\x44\n\nTodayTicks\x12\x1d.routeguide.TodayTicksRequest\x1a\x15.routeguide.Dataframe\"\x00\x42\x31\n\x17\x63.pxsdirac.grpc.tushareB\x0eTushareServiceP\x01\xa2\x02\x03RTGb\x06proto3')
+  serialized_pb=_b('\n\rtushare.proto\x12\nrouteguide\"N\n\x11TodayTicksRequest\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\x12+\n\x0b\x64\x61ta_source\x18\x02 \x01(\x0e\x32\x16.routeguide.DataSource\"\x0c\n\nEmptyParam\"\x1c\n\x0bStringValue\x12\r\n\x05value\x18\x01 \x01(\t\"\x81\x01\n\x0fHistDataRequest\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\x12\x1f\n\x05start\x18\x02 \x01(\x0b\x32\x10.routeguide.Date\x12\x1d\n\x03\x65nd\x18\x03 \x01(\x0b\x32\x10.routeguide.Date\x12 \n\x05kType\x18\x04 \x01(\x0e\x32\x11.routeguide.KType\"l\n\x0fTickDataRequest\x12\x0c\n\x04\x63ode\x18\x01 \x01(\t\x12\x1e\n\x04\x64\x61te\x18\x02 \x01(\x0b\x32\x10.routeguide.Date\x12+\n\x0b\x64\x61ta_source\x18\x03 \x01(\x0e\x32\x16.routeguide.DataSource\"\x19\n\tDataframe\x12\x0c\n\x04json\x18\x01 \x01(\t\"0\n\x04\x44\x61te\x12\x0c\n\x04year\x18\x01 \x01(\x05\x12\r\n\x05month\x18\x02 \x01(\x05\x12\x0b\n\x03\x64\x61y\x18\x03 \x01(\x05*?\n\x05KType\x12\x05\n\x01\x44\x10\x00\x12\x05\n\x01W\x10\x01\x12\x05\n\x01M\x10\x02\x12\x06\n\x02m5\x10\x03\x12\x07\n\x03m15\x10\x04\x12\x07\n\x03m30\x10\x05\x12\x07\n\x03m60\x10\x06*0\n\nDataSource\x12\x08\n\x04Sina\x10\x00\x12\x0b\n\x07Tencent\x10\x01\x12\x0b\n\x07Netease\x10\x02\x32\x9a\x02\n\x0eTushareService\x12>\n\x0bMoneySupply\x12\x16.routeguide.EmptyParam\x1a\x15.routeguide.Dataframe\"\x00\x12@\n\x08HistData\x12\x1b.routeguide.HistDataRequest\x1a\x15.routeguide.Dataframe\"\x00\x12@\n\x08TickData\x12\x1b.routeguide.TickDataRequest\x1a\x15.routeguide.Dataframe\"\x00\x12\x44\n\nTodayTicks\x12\x1d.routeguide.TodayTicksRequest\x1a\x15.routeguide.Dataframe\"\x00\x42\x31\n\x17\x63.pxsdirac.grpc.tushareB\x0eTushareServiceP\x01\xa2\x02\x03RTGb\x06proto3')
 )
 
 _KTYPE = _descriptor.EnumDescriptor(
@@ -61,12 +61,39 @@ _KTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=382,
-  serialized_end=445,
+  serialized_start=472,
+  serialized_end=535,
 )
 _sym_db.RegisterEnumDescriptor(_KTYPE)
 
 KType = enum_type_wrapper.EnumTypeWrapper(_KTYPE)
+_DATASOURCE = _descriptor.EnumDescriptor(
+  name='DataSource',
+  full_name='routeguide.DataSource',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='Sina', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='Tencent', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='Netease', index=2, number=2,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=537,
+  serialized_end=585,
+)
+_sym_db.RegisterEnumDescriptor(_DATASOURCE)
+
+DataSource = enum_type_wrapper.EnumTypeWrapper(_DATASOURCE)
 D = 0
 W = 1
 M = 2
@@ -74,6 +101,9 @@ m5 = 3
 m15 = 4
 m30 = 5
 m60 = 6
+Sina = 0
+Tencent = 1
+Netease = 2
 
 
 
@@ -91,6 +121,13 @@ _TODAYTICKSREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data_source', full_name='routeguide.TodayTicksRequest.data_source', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -104,7 +141,7 @@ _TODAYTICKSREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=29,
-  serialized_end=62,
+  serialized_end=107,
 )
 
 
@@ -127,8 +164,8 @@ _EMPTYPARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=64,
-  serialized_end=76,
+  serialized_start=109,
+  serialized_end=121,
 )
 
 
@@ -158,8 +195,8 @@ _STRINGVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=78,
-  serialized_end=106,
+  serialized_start=123,
+  serialized_end=151,
 )
 
 
@@ -210,8 +247,8 @@ _HISTDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=109,
-  serialized_end=238,
+  serialized_start=154,
+  serialized_end=283,
 )
 
 
@@ -236,6 +273,13 @@ _TICKDATAREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data_source', full_name='routeguide.TickDataRequest.data_source', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -248,8 +292,8 @@ _TICKDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=240,
-  serialized_end=303,
+  serialized_start=285,
+  serialized_end=393,
 )
 
 
@@ -279,8 +323,8 @@ _DATAFRAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=305,
-  serialized_end=330,
+  serialized_start=395,
+  serialized_end=420,
 )
 
 
@@ -324,14 +368,16 @@ _DATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=332,
-  serialized_end=380,
+  serialized_start=422,
+  serialized_end=470,
 )
 
+_TODAYTICKSREQUEST.fields_by_name['data_source'].enum_type = _DATASOURCE
 _HISTDATAREQUEST.fields_by_name['start'].message_type = _DATE
 _HISTDATAREQUEST.fields_by_name['end'].message_type = _DATE
 _HISTDATAREQUEST.fields_by_name['kType'].enum_type = _KTYPE
 _TICKDATAREQUEST.fields_by_name['date'].message_type = _DATE
+_TICKDATAREQUEST.fields_by_name['data_source'].enum_type = _DATASOURCE
 DESCRIPTOR.message_types_by_name['TodayTicksRequest'] = _TODAYTICKSREQUEST
 DESCRIPTOR.message_types_by_name['EmptyParam'] = _EMPTYPARAM
 DESCRIPTOR.message_types_by_name['StringValue'] = _STRINGVALUE
@@ -340,6 +386,7 @@ DESCRIPTOR.message_types_by_name['TickDataRequest'] = _TICKDATAREQUEST
 DESCRIPTOR.message_types_by_name['Dataframe'] = _DATAFRAME
 DESCRIPTOR.message_types_by_name['Date'] = _DATE
 DESCRIPTOR.enum_types_by_name['KType'] = _KTYPE
+DESCRIPTOR.enum_types_by_name['DataSource'] = _DATASOURCE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 TodayTicksRequest = _reflection.GeneratedProtocolMessageType('TodayTicksRequest', (_message.Message,), {
@@ -400,8 +447,8 @@ _TUSHARESERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=448,
-  serialized_end=730,
+  serialized_start=588,
+  serialized_end=870,
   methods=[
   _descriptor.MethodDescriptor(
     name='MoneySupply',

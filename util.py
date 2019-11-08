@@ -33,5 +33,15 @@ def ktype_to_str(kType):
     else:
         return 'D'
 
+def data_source_to_str(data_source):
+    if data_source == Sina:
+        return 'sn'
+    elif data_source == Tencent:
+        return 'tt'
+    elif data_source == Netease:
+        return 'nt'
+    else:
+        return 'sn'
+
 def result(df):
     return Dataframe(json = df.to_json(orient='split'))

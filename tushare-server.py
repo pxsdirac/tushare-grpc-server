@@ -36,7 +36,8 @@ class TushareService(tushare_pb2_grpc.TushareServiceServicer):
 
     def TodayTicks(self, request, context):
         code = request.code
-        df = ts.get_today_ticks(code)
+        src = data_source_to_str(request.data_source)
+        df = ts.get_today_ticks(code,src = src)
         return result(df)
     def Index(self, request, context):
         df = ts.get_index()
