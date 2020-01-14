@@ -39,6 +39,10 @@ class TushareService(tushare_pb2_grpc.TushareServiceServicer):
         src = data_source_to_str(request.data_source)
         df = ts.get_today_ticks(code,src = src)
         return result(df)
+    def RealTimeQuote(self, request, context):
+        code = request.code
+        df = ts.get_realtime_quotes(code)
+        return result(df)
     def Index(self, request, context):
         df = ts.get_index()
         return result(df)

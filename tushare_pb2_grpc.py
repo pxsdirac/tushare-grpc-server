@@ -34,6 +34,11 @@ class TushareServiceStub(object):
         request_serializer=tushare__pb2.TodayTicksRequest.SerializeToString,
         response_deserializer=tushare__pb2.Dataframe.FromString,
         )
+    self.RealTimeQuote = channel.unary_unary(
+        '/routeguide.TushareService/RealTimeQuote',
+        request_serializer=tushare__pb2.RealTimeQuoteRequest.SerializeToString,
+        response_deserializer=tushare__pb2.Dataframe.FromString,
+        )
 
 
 class TushareServiceServicer(object):
@@ -68,6 +73,13 @@ class TushareServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def RealTimeQuote(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_TushareServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -89,6 +101,11 @@ def add_TushareServiceServicer_to_server(servicer, server):
       'TodayTicks': grpc.unary_unary_rpc_method_handler(
           servicer.TodayTicks,
           request_deserializer=tushare__pb2.TodayTicksRequest.FromString,
+          response_serializer=tushare__pb2.Dataframe.SerializeToString,
+      ),
+      'RealTimeQuote': grpc.unary_unary_rpc_method_handler(
+          servicer.RealTimeQuote,
+          request_deserializer=tushare__pb2.RealTimeQuoteRequest.FromString,
           response_serializer=tushare__pb2.Dataframe.SerializeToString,
       ),
   }
